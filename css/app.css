@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* --- */
+
+:root {
+  --animate-duration: 8s;
+}
+
+/* --- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* --- */
+
+html {
+  font-size: 2vmin;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+/* --- */
+
+#container {
+  height: 100vh;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.5)
+  );
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+/* --- */
+
+video {
+  /* Adjust width/height video aspect ratio to viewpor size */
+  height: 160%;
+
+  position: absolute;
+  z-index: -1;
+
+  /* Center Scene */
+  top: calc(50% - 32rem);
+  left: calc(50% - 60rem);
+}
+
+/* --- */
+
+.main-grid {
+  height: 35rem;
+  width: 35rem;
+
+  color: lightgray;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 0.2rem;
+}
+
+/* --- */
+
+.main-grid span {
+
+  cursor: default;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: color 1s ease, background-color 1s ease;
+}
+
+.main-grid span:hover {
+  color: bisque;
+
+  background-color: chocolate;
+}
+
+
+/* --- */
+
+.main-grid a {
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: color 1s ease, background-color 1s ease;
+}
+
+.main-grid a:hover {
+  color: bisque;
+
+  background-color: chocolate;
+}
+
+/* --- */
+
+.dark {
+  color: #ccc;
+
+  background-color: #333;
+}
+
+.light {
+  color: #333;
+
+  background-color: #ccc;
+}
+
+/* ---  */
+
+.main-grid .material-icons {
+  color: orange;
+  cursor: pointer;
+  font-size: 3rem;
+}
